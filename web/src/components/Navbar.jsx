@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="w-full sticky top-0 z-30 bg-white/80 backdrop-blur border-b border-zinc-100">
+    <header className="w-full fixed inset-x-0 top-0 z-30 bg-white/80 backdrop-blur">
       <nav className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 h-16 grid grid-cols-[auto_1fr_auto] items-center gap-4">
         <div className="flex items-center">
           <Link href="/" className="flex items-center">
@@ -76,3 +76,4 @@ export default function Navbar() {
     </header>
   );
 }
+

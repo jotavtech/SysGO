@@ -37,3 +37,4 @@ Acesse http://localhost:3000
 
 ## Notas de UI
 - Tipografia e cores base alinhadas ao visual do mock. Ajustes finos podem ser feitos em `globals.css` e classes do Tailwind nos componentes.
+                                                                                                                                                                                

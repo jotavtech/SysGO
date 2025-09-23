@@ -99,6 +99,7 @@ export default function Systems() {
               badge="GESTÃO"
               title="Map-OS"
               highlighted
+              ctaHref="/mapos"
               desc="Organize sua assistência técnica ou operação de campo em um só lugar, com alertas automáticos, histórico de clientes e cobranças integradas."
               icon={<span className="material-symbols-outlined text-[#104E49]">receipt_long</span>}
             />
