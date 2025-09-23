@@ -14,8 +14,8 @@ export default function Navbar() {
             <Image
               src="/assets/images/logo.webp"
               alt="SysGO"
-              width={56}
-              height={56}
+              width={64}
+              height={64}
               priority
               className="rounded-sm"
             />
@@ -23,11 +23,11 @@ export default function Navbar() {
         </div>
 
         <ul className="hidden md:flex justify-center items-center gap-7 text-sm text-zinc-700">
-          <li><Link href="#inicio" className="hover:text-emerald-700 transition">Início</Link></li>
-          <li><Link href="#servicos" className="hover:text-emerald-700 transition">Serviços</Link></li>
-          <li><Link href="#sistemas" className="hover:text-emerald-700 transition">Sistemas</Link></li>
-          <li><Link href="#depoimentos" className="hover:text-emerald-700 transition">Depoimentos</Link></li>
-          <li><Link href="#contato" className="hover:text-emerald-700 transition">Contato</Link></li>
+          <li><Link href="#inicio" className="transition hover:text-[#104E49]">Início</Link></li>
+          <li><Link href="#servicos" className="transition hover:text-[#104E49]">Serviços</Link></li>
+          <li><Link href="#sistemas" className="transition hover:text-[#104E49]">Sistemas</Link></li>
+          <li><Link href="#depoimentos" className="transition hover:text-[#104E49]">Depoimentos</Link></li>
+          <li><Link href="#contato" className="transition hover:text-[#104E49]">Contato</Link></li>
         </ul>
 
         <div className="hidden sm:flex items-center gap-2 sm:gap-3 justify-self-start">
@@ -39,7 +39,7 @@ export default function Navbar() {
           </Link>
           <Link
             href="#comecar"
-            className="inline-flex h-9 items-center rounded-full bg-emerald-700 px-4 text-sm font-semibold text-white shadow-sm hover:bg-emerald-800"
+            className="inline-flex h-9 items-center rounded-full bg-[#104E49] px-4 text-sm font-semibold text-white shadow-sm hover:bg-[#0d3f3b]"
           >
             Começar agora
           </Link>
@@ -68,7 +68,7 @@ export default function Navbar() {
             <Link href="#contato" className="py-2 text-sm text-zinc-800">Contato</Link>
             <div className="flex items-center gap-2 pt-2">
               <Link href="#entrar" className="inline-flex h-9 items-center rounded-full border border-zinc-200 bg-white px-4 text-sm font-medium text-zinc-800 shadow-sm">Entrar</Link>
-              <Link href="#comecar" className="inline-flex h-9 items-center rounded-full bg-emerald-700 px-4 text-sm font-semibold text-white shadow-sm">Começar agora</Link>
+              <Link href="#comecar" className="inline-flex h-9 items-center rounded-full bg-[#104E49] px-4 text-sm font-semibold text-white shadow-sm hover:bg-[#0d3f3b]">Começar agora</Link>
             </div>
           </div>
         </div>
