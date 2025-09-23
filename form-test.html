@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="all, follow" />
+        <meta name="language" content="Portuguese">
+        <meta name="keywords" content="MAPOS, MAPOS ONLINE, MAP-OS ONLINE, HOSPEDAGEM MAP-OS, HOSPEDAGEM MAPOS, MAP-OS, Sistema de gestão, ordem de serviço, Os, ordem, serviço, sistema, gestão de assistencia técnica, manutenção, calculo de horas, hora tecnica, faturamento, sistema mei, mei, sistema para mei, gestao para micro empresa,map os,mapos,sistema de gestão,ordem de serviços,sistema de gestão de chamados,sistema de ordens de serviço,sistema de gestão de serviços,sistema de venda,sistema de gestão para serviços,sistema de ordem,sistema para ordem de serviço,erp para empresas de serviços">
+
+        <title>Solicitação de teste sistema MAP-OS | SysGO</title>
+
+        <!-- SEO -->
+        <meta property="og:title" content="SysGO - Solicitação de teste sistema MAP-OS." />
+        <meta property="og:description" content="Crie e gerencie ordens de serviços, clientes, fornecedores, produtos, emita boletos e controle o financeiro da sua Assistência Técnica e muito mais..." />
+        <meta property="og:url" content="https://www.sysgo.com.br/mapos" />
+        <meta property="og:site_name" content="SysGO | Develop, Hosting & Support" />
+        <meta property="og:image" content="https://sysgo.com.br/img-externo/ogbanner-mapos.png" />
+        <meta property="og:image:secure_url" content="https://sysgo.com.br/img-externo/ogbanner-mapos.png" />
+        <meta property="og:image:alt" content="Logo da SysGo no canto superior esquerdo. Texto principal: 'Gestão de Ordens de Serviços para Assistências Técnicas'. Imagem de smartphone mostrando a tela de login do aplicativo MAP-OS. Selo 'MAP-OS Hospedagem Parceira' ao lado do smartphone." />
+        <meta property="og:locale" content="pt_BR" />
+        <meta property="og:type" content="website" />
+
+        <meta itemprop="name" content="SysGO - Solicitação de teste sistema MAP-OS."/>
+        <meta itemprop="description" content="Crie e gerencie ordens de serviços, clientes, fornecedores, produtos, emita boletos e controle o financeiro da sua Assistência Técnica e muito mais...">
+        <link rel="author" href="https://sysgo.com.br"/>
+
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:url" content="https://sysgo.com.br"/>
+        <meta name="twitter:title" content="SysGO - Solicitação de teste sistema MAP-OS."/>
+        <meta name="twitter:description" content="Crie e gerencie ordens de serviços, clientes, fornecedores, produtos, emita boletos e controle o financeiro da sua Assistência Técnica e muito mais..."/>
+        <meta name="twitter:image" content="https://sysgo.com.br/img-externo/ogbanner-mapos.png"/>
+        <!-- SEO -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e1e5e9;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+        }
+
+        .url-preview {
+            margin-top: 10px;
+            padding: 12px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            color: #495057;
+            min-height: 20px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-btn:hover:not(:disabled) {
+            background: linear-gradient(135deg, #5a67d8, #6b46c1);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .progress-container {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e1e5e9;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            width: 0%;
+            transition: width 0.1s ease;
+            border-radius: 10px;
+        }
+
+        .progress-text {
+            text-align: center;
+            margin-top: 10px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error-message {
+            display: none;
+            padding: 15px;
+            background: #fee;
+            border: 1px solid #fcc;
+            border-radius: 8px;
+            color: #c33;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+                margin: 10px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TNGP0SJ961"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-TNGP0SJ961');
+    </script>
+
+    <!-- MMHospedagem Analytics -->
+    <script data-host="https://analise.cloud.goiania.br/public" data-dnt="false" src="https://analise.cloud.goiania.br/public/js/script.js" id="ZwSg9rf6GA" async defer></script>
+
+    <!-- MS Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "pccy6apadx");
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Solicitar Teste</h1>
+        <p class="subtitle">Preencha os dados para testar o sistema Map-OS</p>
+        
+        <form id="testForm">
+            <div class="form-group">
+                <label for="nomeCompleto">Nome Completo *</label>
+                <input type="text" id="nomeCompleto" name="nomeCompleto" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nomeEmpresa">Nome da Empresa *</label>
+                <input type="text" id="nomeEmpresa" name="nomeEmpresa" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="celular">Celular (WhatsApp) *</label>
+                <input type="tel" id="celular" name="celular" required placeholder="(00) 00000-0000">
+            </div>
+
+            <div class="form-group">
+                <label for="urlSistema">Subdomínio do Sistema *</label>
+                <select id="urlSistema" name="urlSistema" required>
+                    <option value="">Selecione uma opção</option>
+                    <option value="sysgo.com.br">sysgo.com.br</option>
+                    <option value="mapos.online">mapos.online</option>
+                    <option value="mapos.store">mapos.store</option>
+                    <option value="mapos.cloud">mapos.cloud</option>
+                </select>
+                <div class="url-preview" id="urlPreview"></div>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">
+                Solicitar Teste
+            </button>
+
+            <div class="progress-container" id="progressContainer">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-text" id="progressText">
+                    <span class="loading-spinner"></span>
+                    Processando solicitação... 0%
+                </div>
+            </div>
+
+            <div class="error-message" id="errorMessage">
+                Ocorreu um erro ao processar sua solicitação. Você será redirecionado para o WhatsApp.
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('testForm');
+        const nomeEmpresaInput = document.getElementById('nomeEmpresa');
+        const urlSistemaSelect = document.getElementById('urlSistema');
+        const urlPreview = document.getElementById('urlPreview');
+        const submitBtn = document.getElementById('submitBtn');
+        const progressContainer = document.getElementById('progressContainer');
+        const progressFill = document.getElementById('progressFill');
+        const progressText = document.getElementById('progressText');
+        const errorMessage = document.getElementById('errorMessage');
+
+        // Função para gerar URL baseada no primeiro nome da empresa
+        function generateUrl() {
+            const nomeEmpresa = nomeEmpresaInput.value.trim();
+            const selectedDomain = urlSistemaSelect.value;
+            
+            if (nomeEmpresa && selectedDomain) {
+                const primeiroNome = nomeEmpresa.split(' ')[0].toLowerCase()
+                    .normalize('NFD')
+                    .replace(/[\u0300-\u036f]/g, '') // Remove acentos
+                    .replace(/[^a-z0-9]/g, ''); // Remove caracteres especiais
+                
+                const fullUrl = `https://${primeiroNome}.${selectedDomain}`;
+                urlPreview.textContent = fullUrl;
+                return fullUrl;
+            } else {
+                urlPreview.textContent = '';
+                return '';
+            }
+        }
+
+        // Event listeners para atualizar a URL em tempo real
+        nomeEmpresaInput.addEventListener('input', generateUrl);
+        urlSistemaSelect.addEventListener('change', generateUrl);
+
+        // Máscara para o celular
+        document.getElementById('celular').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            value = value.replace(/^(\d{2})(\d{5})(\d{4}).*/, '($1) $2-$3');
+            e.target.value = value;
+        });
+
+        // Submissão do formulário
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+            const targetUrl = generateUrl();
+            
+            if (!targetUrl) {
+                alert('Por favor, preencha todos os campos obrigatórios.');
+                return;
+            }
+
+            // Desabilitar botão e mostrar progresso
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="loading-spinner"></span>Processando...';
+            progressContainer.style.display = 'block';
+            errorMessage.style.display = 'none';
+
+            let progress = 0;
+            let progressInterval;
+            let requestCompleted = false;
+            let timeoutId;
+
+            // Função para iniciar o progresso
+            function startProgress() {
+                progressInterval = setInterval(() => {
+                    if (!requestCompleted && progress < 100) {
+                        progress += 100 / 600; // 600 intervalos de 100ms = 60 segundos
+                        progressFill.style.width = progress + '%';
+                        progressText.innerHTML = `</span>Processando solicitação... ${Math.round(progress)}%`;
+                        
+                        if (progress >= 100) {
+                            clearInterval(progressInterval);
+                            if (!requestCompleted) {
+                                // Timeout - redirecionar para WhatsApp
+                                showErrorAndRedirect();
+                            }
+                        }
+                    }
+                }, 100);
+            }
+
+            // Função para completar o progresso instantaneamente
+            function completeProgress() {
+                if (progressInterval) {
+                    clearInterval(progressInterval);
+                }
+                if (timeoutId) {
+                    clearTimeout(timeoutId);
+                }
+                
+                progress = 100;
+                progressFill.style.width = '100%';
+                progressText.innerHTML = `</span>Processando solicitação... 100%`;
+                requestCompleted = true;
+            }
+
+            // Iniciar o progresso
+            startProgress();
+
+            try {
+                // Fazer requisição HTTP POST
+                const response = await fetch('https://ws.sysgo.net.br/webhook/82ddf268-f633-4581-b4f3-14313d868f9e', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        ...data,
+                        urlGerada: targetUrl
+                    })
+                });
+
+                // Completar progresso quando recebe resposta
+                completeProgress();
+
+                // Aguardar um pouco para mostrar 100% e então redirecionar
+                setTimeout(() => {
+                    if (response.ok) {
+                        // Sucesso - redirecionar para a URL gerada
+                        progressText.innerHTML = `<span class="loading-spinner"></span>Sucesso! Redirecionando...`;
+                        setTimeout(() => {
+                            window.location.href = targetUrl;
+                        }, 1500);
+                    } else {
+                        // Erro - redirecionar para WhatsApp
+                        showErrorAndRedirect();
+                    }
+                }, 500);
+
+            } catch (error) {
+                console.error('Erro na requisição:', error);
+                // Completar progresso e redirecionar para WhatsApp
+                completeProgress();
+                setTimeout(() => {
+                    showErrorAndRedirect();
+                }, 500);
+            }
+        });
+
+        function showErrorAndRedirect() {
+            progressContainer.style.display = 'none';
+            errorMessage.style.display = 'block';
+            submitBtn.innerHTML = 'Redirecionando...';
+            
+            setTimeout(() => {
+                window.location.href = 'https://wa.me/5511913688290?text=Olá, estou com um problema ao solicitar um teste do sistema de gestão.';
+            }, 3000);
+        }
+
+        // Inicializar a geração de URL
+        generateUrl();
+    </script>
+</body>
+</html>

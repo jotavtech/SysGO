@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /public/
+Allow: /politicas/
+Allow: /assets/
+
+Sitemap: https://sysgo.com.br/sitemap.xml

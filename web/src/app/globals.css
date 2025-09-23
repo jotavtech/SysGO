@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Background grid of thin squares and reveal animation from edges to center */
+.grid-bg {
+  /* Linhas finas quase imperceptíveis (cinza neutro) */
+  background-image:
+    repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.08) 0 1px, transparent 1px 96px),
+    repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.08) 0 1px, transparent 1px 96px);
+  background-size: 96px 96px, 96px 96px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .grid-bg {
+    background-image:
+      repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.09) 0 1px, transparent 1px 96px),
+      repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.09) 0 1px, transparent 1px 96px);
+  }
+}
+
+.reveal-mask {
+  /* Edges visíveis primeiro (branco = visível), centro oculto (transparente) → revela para dentro */
+  --r: 60%;
+  -webkit-mask-image: radial-gradient(circle at center, transparent 0 var(--r), #fff calc(var(--r) + 1%));
+  mask-image: radial-gradient(circle at center, transparent 0 var(--r), #fff calc(var(--r) + 1%));
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  animation: reveal-center 1200ms ease-out forwards;
+}
+
+@keyframes reveal-center {
+  from { --r: 60%; }
+  to { --r: 0%; }
+}

@@ -1,0 +1,57 @@
+import Image from "next/image";
+import Link from "next/link";
+
+export default function Hero() {
+  return (
+    <section id="inicio" className="relative w-full">
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div aria-hidden className="h-full w-full grid-bg" />
+      </div>
+
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+        <div className="flex flex-col items-center text-center gap-6">
+          <span className="inline-flex items-center gap-2 rounded-full border border-emerald-100 bg-white px-4 py-1 text-xs font-medium text-emerald-700 shadow-sm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 2L21 10L13 18" stroke="#087f5b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M3 10H21" stroke="#087f5b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            SOLUÇÕES EM NUVEM
+          </span>
+
+          <h1 className="max-w-3xl text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight text-emerald-800">
+            Seu negócio mais ágil, com sistemas
+            <br />
+            que simplificam sua rotina.
+          </h1>
+
+          <p className="max-w-2xl text-base sm:text-lg text-zinc-600">
+            Sistemas intuitivos para ordem de serviço, sites, painéis personalizados e mais. Tudo que sua empresa precisa para
+            funcionar com mais controle, organização e tranquilidade.
+          </p>
+
+          <div className="mt-2 flex flex-col sm:flex-row items-center gap-3">
+            <Link href="#teste" className="inline-flex h-11 items-center rounded-full bg-emerald-700 px-6 text-sm font-semibold text-white shadow-sm hover:bg-emerald-800">
+              Teste grátis por 7 dias
+            </Link>
+            <Link href="#contato" className="inline-flex h-11 items-center rounded-full border border-zinc-200 bg-white px-6 text-sm font-medium text-zinc-800 shadow-sm hover:bg-zinc-50">
+              Entrar em contato
+            </Link>
+          </div>
+        </div>
+
+        <div className="mt-20">
+          <p className="text-xs uppercase tracking-wide text-zinc-500 text-center mb-4">Mais de 50 empresas já confiam na SysGO</p>
+          <div className="flex flex-wrap items-center justify-center gap-x-14 gap-y-8 opacity-90">
+            {[
+              "/assets/images/logo.webp",
+              "/assets/images/logo-white.webp",
+              "/assets/images/sysgo.webp",
+              "/assets/images/logo-bkp.webp",
+              "/assets/images/testimonial-author-1.webp",
+              "/assets/images/testimonial-author-2.webp",
+            ].map((src, i) => (
+              <Image key={i} src={src} alt="logo" width={150} height={40} className="h-10 w-auto object-contain grayscale" />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
