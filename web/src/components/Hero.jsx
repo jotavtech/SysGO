@@ -1,7 +1,18 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import TrialModal from "@/components/TrialModal";
 
 export default function Hero() {
+  const [openTrial, setOpenTrial] = useState(false);
+  const handleSubmitTrial = (data) => {
+    // Placeholder de ação: aqui você pode enviar para uma API/Email/CRM
+    console.log("Solicitação de teste:", data);
+    alert("Solicitação enviada! Entraremos em contato em breve.");
+    setOpenTrial(false);
+  };
+
   return (
     <section id="inicio" className="relative w-full overflow-hidden scroll-mt-24">
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
@@ -27,10 +38,14 @@ export default function Hero() {
           </p>
 
           <div className="mt-2 flex flex-col sm:flex-row items-center gap-3">
-            <Link href="#teste" className="inline-flex h-11 items-center rounded-full bg-[#104E49] px-6 text-sm font-semibold text-white shadow-sm hover:bg-[#0d3f3b]">
+            <button
+              type="button"
+              onClick={() => setOpenTrial(true)}
+              className="inline-flex h-11 items-center rounded-full bg-[#104E49] px-6 text-sm font-semibold text-white shadow-sm hover:bg-[#0d3f3b]"
+            >
               Teste grátis por 7 dias
-            </Link>
-            <Link href="#contato" className="inline-flex h-11 items-center rounded-full border border-zinc-200 bg-white px-6 text-sm font-medium text-zinc-800 shadow-sm hover:bg-zinc-50">
+            </button>
+            <Link href="/fale-conosco" className="inline-flex h-11 items-center rounded-full border border-zinc-200 bg-white px-6 text-sm font-medium text-zinc-800 shadow-sm hover:bg-zinc-50">
               Entrar em contato
             </Link>
           </div>
@@ -52,6 +67,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      <TrialModal open={openTrial} onClose={() => setOpenTrial(false)} onSubmit={handleSubmitTrial} />
     </section>
   );
 }

@@ -49,13 +49,11 @@ export default function Why() {
         </div>
 
         <div className="mt-10 flex justify-center">
-          <Link href="#comecar" className="inline-flex h-11 items-center rounded-full bg-white/95 px-6 text-sm font-semibold text-[#104E49] shadow-sm hover:bg-white">
+          <Link href="/mapos" className="inline-flex h-11 items-center rounded-full bg-white/95 px-6 text-sm font-semibold text-[#104E49] shadow-sm hover:bg-white">
             Começar agora
           </Link>
         </div>
       </div>
-
-      {/* subtle top/bottom curve separators */}
       <div className="pointer-events-none absolute inset-x-0 -top-6 h-6 bg-white rounded-b-[24px]" />
       <div className="pointer-events-none absolute inset-x-0 -bottom-6 h-6 bg-white rounded-t-[24px]" />
     </section>

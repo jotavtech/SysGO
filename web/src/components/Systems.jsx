@@ -90,6 +90,7 @@ export default function Systems() {
               label="Sua presença digital sem dor de cabeça"
               badge="WEB"
               title="Site Inteligente"
+              ctaHref="/hospedagens"
               desc="Hospedagem, domínio, painel e suporte — tudo configurado e pronto para sua empresa aparecer com estrutura profissional."
               icon={<span className="material-symbols-outlined text-[#104E49]">sell</span>}
             />
@@ -108,6 +109,7 @@ export default function Systems() {
               label="Sistemas sob medida para o seu negócio"
               badge="SOB-MEDIDA"
               title="Painel Personalizado"
+              ctaHref="/fale-conosco"
               desc="Criamos soluções exclusivas para empresas que precisam de um sistema específico, funcional e com suporte técnico ágil."
               icon={<span className="material-symbols-outlined text-[#104E49]">database</span>}
             />
